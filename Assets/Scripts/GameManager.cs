@@ -46,7 +46,7 @@ public class GameManager : MonoBehaviour
             var block = Instantiate(_blockPrefab);
         }
 
-        if (freeNodes.Count() == 1)
+        if (freeNodes.Count() == 2)
         {
 
         }
