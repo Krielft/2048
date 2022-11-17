@@ -157,7 +157,7 @@ public class GameManager : MonoBehaviour
 
         foreach (var block in orderedBlocks)
         {
-            var movePoint = block.Merging ? block.MergingBlock.Pos : block.Node.Pos;
+            var movePoint = block.MergingBlock != null ? block.MergingBlock.Node.Pos : block.Node.Pos;
 
             sequence.Insert(0, block.transform.DOMove(movePoint, _travelTime));
         }
@@ -166,7 +166,7 @@ public class GameManager : MonoBehaviour
         {
             foreach (var block in orderedBlocks.Where(b=>b.MergingBlock != null))
             {
-                MergeBlocks(block, block.MergingBlock);
+                MergeBlocks(block.MergingBlock, block);
             }
 
             ChangeState(GameState.SpawningBlocks);
