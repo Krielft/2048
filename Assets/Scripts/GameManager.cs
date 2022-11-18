@@ -25,6 +25,8 @@ public class GameManager : MonoBehaviour
     private GameState _state;
     private int _round;
 
+    public GameObject Panel;
+
     private BlockType GetBlockTypeByValue(int value) => _types.First(t => t.Value == value);
 
     private void Start()
@@ -49,9 +51,11 @@ public class GameManager : MonoBehaviour
             case GameState.Moving:
                 break;
             case GameState.Win:
+                Panel.SetActive(true);
                 _winScreen.SetActive(true);
                 break;
             case GameState.Lose:
+                Panel.SetActive(true);
                 _loseScreen.SetActive(true);
                 break;
             default:
