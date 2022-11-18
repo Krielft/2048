@@ -2123,7 +2123,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 168754185}
         m_TargetAssemblyTypeName: SettingsMenu, Assembly-CSharp
-        m_MethodName: SetVolume
+        m_MethodName: SetSoundVolume
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
